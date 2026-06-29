@@ -1,1 +1,0 @@
-print("Welcome to AI Resume Analyzer")
