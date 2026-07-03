@@ -1,24 +1,10 @@
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import accuracy_score
 
 
-def train_model(X, categories):
+def prepare_data(X, categories):
     """
-    Train Naive Bayes classifier.
-
-    Parameters:
-        X : TF-IDF Features
-        categories : Resume Categories
-
-    Returns:
-        model
-        encoder
-        X_test
-        y_test
-        predictions
-        accuracy
+    Split the dataset into training and testing sets.
     """
 
     encoder = LabelEncoder()
@@ -33,19 +19,4 @@ def train_model(X, categories):
         stratify=y
     )
 
-    model = MultinomialNB()
-
-    model.fit(X_train, y_train)
-
-    predictions = model.predict(X_test)
-
-    accuracy = accuracy_score(y_test, predictions)
-
-    return (
-        model,
-        encoder,
-        X_test,
-        y_test,
-        predictions,
-        accuracy
-    )
+    return X_train, X_test, y_train, y_test, encoder
