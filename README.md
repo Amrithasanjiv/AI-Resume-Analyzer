@@ -1,6 +1,6 @@
-# 📄 Resumatic — AI Resume Analyzer & Matcher
+# 📄 resumeAI — AI Resume Analyzer & Matcher
 
-Resumatic is a professional, AI-powered Resume Analyzer built to help job seekers optimize their resumes for Applicant Tracking Systems (ATS). Using Machine Learning, Natural Language Processing (NLP), and parsing algorithms, Resumatic evaluates resumes, categorizes them across 24 job domains, extracts key technical skills, and matches them against target job descriptions.
+resumeAI is a professional, AI-powered Resume Analyzer built to help job seekers optimize their resumes for Applicant Tracking Systems (ATS). Using Machine Learning, Natural Language Processing (NLP), and parsing algorithms, resumeAI evaluates resumes, categorizes them across 24 job domains, extracts key technical skills, and matches them against target job descriptions.
 
 ---
 
