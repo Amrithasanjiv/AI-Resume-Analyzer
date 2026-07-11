@@ -1,7 +1,11 @@
 import joblib
 from pathlib import Path
 
-from preprocess import clean_resume
+try:
+    from .preprocess import clean_resume
+except ImportError:
+    from preprocess import clean_resume
+
 
 MODEL_DIR = Path("models")
 
