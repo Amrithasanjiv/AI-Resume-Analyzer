@@ -1,10 +1,24 @@
 import re
 from bs4 import BeautifulSoup
+import nltk
+
+# Download required NLTK resources automatically
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
+
+try:
+    nltk.data.find('corpora/wordnet')
+except LookupError:
+    nltk.download('wordnet')
+
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
 stop_words = set(stopwords.words("english"))
 lemmatizer = WordNetLemmatizer()
+
 
 def clean_resume(text):
     text = text.lower()
